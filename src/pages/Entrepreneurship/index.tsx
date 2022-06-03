@@ -53,6 +53,8 @@ import Template from '../../components/templates/BlinkistTemplate';
       })
       navigate(`/bookdetailview${id}`)
     }
+
+    const [searchCard, setSearchCard] = useState('')
   
     return (
       <Template content={
@@ -77,12 +79,19 @@ import Template from '../../components/templates/BlinkistTemplate';
       </CardContent>
       </Card>
       <div style={{marginLeft:'50px',marginTop:'50px', marginBottom:'50px'}}>
-      <TextFieldComponent id={'bookSearch'} placeholder={'Search by title or author'} icon={<SearchIcon htmlColor='black'/>} length={500} />
+      <TextFieldComponent id={'bookSearch'} placeholder={'Search by title or author'} icon={<SearchIcon htmlColor='black' />} length={500} onChange={(event) => {setSearchCard(event.target.value)}} />
       </div>
+      <div>
         <Box sx={{ width: '100%', marginLeft:4, marginRight:4 }}>
         <Typography sx={{marginLeft:'20px',marginBottom:'20px', marginTop:'50px', font:'Cera Pro', fontWeight:'700', fontSize:'24px', lineHeight:'30.17px'}}>Trending blinks</Typography>
         <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 2, sm: 8, md: 12 }}>
-          {BookDetails.map(bookDetail => {if(bookDetail.type === 'Add To Library' && bookDetail.category === 'Trending blinks'){return (
+          {BookDetails.filter((bookDetail)=>{
+            if(searchCard === ''){
+              return bookDetail
+            }else if((bookDetail.author.toLowerCase().includes(searchCard.toLowerCase())) ||(bookDetail.title.toLowerCase().includes(searchCard.toLowerCase())) ){
+              return bookDetail
+            }
+          }).map(bookDetail => {if(bookDetail.type === 'Add To Library' && bookDetail.category === 'Trending blinks'){return (
             <Grid item key={bookDetail.id} xs={2} sm={4} md={4}>
               <CardComponent imgLocation={bookDetail.imgLocation} title={bookDetail.title} author={bookDetail.author} readTime={bookDetail.readTime} readers={bookDetail.readers} type={bookDetail.type} onClick={ () => selectUser(bookDetail.id)} />
             </Grid>
@@ -92,7 +101,13 @@ import Template from '../../components/templates/BlinkistTemplate';
       <Box sx={{ width: '100%', marginLeft:4, marginRight:4 }}>
         <Typography sx={{marginLeft:'20px',marginBottom:'20px', marginTop:'50px', font:'Cera Pro', fontWeight:'700', fontSize:'24px', lineHeight:'30.17px'}}>Just added</Typography>
         <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 2, sm: 8, md: 12 }}>
-          {BookDetails.map(bookDetail => {if(bookDetail.type === 'Add To Library' && bookDetail.category === 'Just added'){return (
+          {BookDetails.filter((bookDetail)=>{
+            if(searchCard === ''){
+              return bookDetail
+            }else if((bookDetail.author.toLowerCase().includes(searchCard.toLowerCase())) ||(bookDetail.title.toLowerCase().includes(searchCard.toLowerCase())) ){
+              return bookDetail
+            }
+          }).map(bookDetail => {if(bookDetail.type === 'Add To Library' && bookDetail.category === 'Just added'){return (
             <Grid item key={bookDetail.id} xs={2} sm={4} md={4}>
               <CardComponent imgLocation={bookDetail.imgLocation} title={bookDetail.title} author={bookDetail.author} readTime={bookDetail.readTime} readers={bookDetail.readers} type={bookDetail.type} onClick={ () => selectUser(bookDetail.id)} />
             </Grid>
@@ -102,13 +117,20 @@ import Template from '../../components/templates/BlinkistTemplate';
       <Box sx={{ width: '100%', marginLeft:4, marginRight:4 }}>
         <Typography sx={{marginLeft:'20px',marginBottom:'20px', marginTop:'50px', font:'Cera Pro', fontWeight:'700', fontSize:'24px', lineHeight:'30.17px'}}>Featured audio blinks</Typography>
         <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 2, sm: 8, md: 12 }}>
-          {BookDetails.map(bookDetail => {if(bookDetail.type === 'Add To Library' && bookDetail.category === 'Featured audio blinks'){return (
+          {BookDetails.filter((bookDetail)=>{
+            if(searchCard === ''){
+              return bookDetail
+            }else if((bookDetail.author.toLowerCase().includes(searchCard.toLowerCase())) ||(bookDetail.title.toLowerCase().includes(searchCard.toLowerCase())) ){
+              return bookDetail
+            }
+          }).map(bookDetail => {if(bookDetail.type === 'Add To Library' && bookDetail.category === 'Featured audio blinks'){return (
             <Grid item key={bookDetail.id} xs={2} sm={4} md={4}>
               <CardComponent imgLocation={bookDetail.imgLocation} title={bookDetail.title} author={bookDetail.author} readTime={bookDetail.readTime} readers={bookDetail.readers} type={bookDetail.type} onClick={ () => selectUser(bookDetail.id)} />
             </Grid>
           )}})}
         </Grid>
       </Box>
+      </div>
       </Container>} />
     );
   }

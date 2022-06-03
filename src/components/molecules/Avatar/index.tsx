@@ -1,7 +1,7 @@
 import { Avatar, Stack } from '@mui/material'
 import React from 'react'
 
-type ButtonProps = {
+type AvatarProps = {
   userName: string
   color: string | undefined
   icon: React.ReactNode | null
@@ -37,7 +37,7 @@ const stringAvatar = (name: string) => {
   };
 }
 
-const AvatarComponent = ({userName, color, icon}: ButtonProps) => {
+const AvatarComponent = ({userName, color, icon}: AvatarProps) => {
   if(color === ''){
     color = stringToColor(userName)
   }

@@ -1,13 +1,16 @@
 import { Card, CardContent, Typography } from '@mui/material'
 import React, { useState } from 'react'
-import ImageComponent from '../../atoms/Image'
+import Box from '@mui/material/Box';
 
-import BookDetails from '../../molecules/BookDetails';
 import Button from '../../atoms/Button';
+import ImageComponent from '../../atoms/Image'
+import IconComponent from '../../atoms/Icon';
+
 
 import AddIcon from '@mui/icons-material/Add';
 import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
-
+import AccessTimeIcon from '@mui/icons-material/AccessTime';
+import PersonOutlineSharpIcon from '@mui/icons-material/PersonOutlineSharp';
 
 type CardProps = {
   imgLocation : string
@@ -91,7 +94,18 @@ const CardComponent = ({imgLocation, title, author, readTime, readers, type, onC
     '&:hover':{backgroundColor: '#F1F6F4'}}}>
       <ImageComponent imgLocation={imgLocation} />
       <CardContent>
-        <BookDetails title={title} author={author} readTime={readTime} readers={readers} />
+      <div style={{display:"flex", flexDirection:"column", flexWrap: "wrap", textAlign:"left"}} >
+      <Typography variant="h6" gutterBottom>
+        <Box sx={{ fontWeight: 'bold'}}>{title}</Box>  
+      </Typography>
+      <Typography variant="body1" gutterBottom color="text.secondary">
+          {author}
+      </Typography>
+      <div style={{display:"flex", justifyContent: "space-between"}}>
+        <IconComponent icon={<AccessTimeIcon color='disabled'/>} title={`${readTime}-minute read`} titleColor={'text.secondary'} onClick={() => {}} />
+        <IconComponent icon={<PersonOutlineSharpIcon color='disabled'/>} title={`${readers}`} titleColor={'text.secondary'} onClick={() => {}} />
+      </div>
+    </div>
       </CardContent>
       {footer}
     </Card>

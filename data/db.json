@@ -37,7 +37,7 @@
       "author": "Amanda Little",
       "readTime": 12,
       "readers": "16k reads",
-      "type": "Finished",
+      "type": "Add To Library",
       "category": "Trending blinks"
     },
     {
@@ -57,7 +57,7 @@
       "author": "Debbie King",
       "readTime": 13,
       "readers": "500 reads",
-      "type": "Read again",
+      "type": "Add To Library",
       "category": "Trending blinks"
     },
     {
@@ -77,7 +77,7 @@
       "author": "Giada De Laurentiis",
       "readTime": 13,
       "readers": "9k reads",
-      "type": "Read again",
+      "type": "Add To Library",
       "category": "Just added"
     },
     {
@@ -87,7 +87,7 @@
       "author": "James Moore",
       "readTime": 12,
       "readers": "18k reads",
-      "type": "Read again",
+      "type": "Add To Library",
       "category": "Just added"
     },
     {
@@ -97,7 +97,7 @@
       "author": "Kathleen Shannon and Emily...",
       "readTime": 13,
       "readers": "1.9k reads",
-      "type": "Read again",
+      "type": "Finished",
       "category": "Trending blinks"
     },
     {
@@ -107,7 +107,7 @@
       "author": "Steve Glaveski",
       "readTime": 15,
       "readers": "1.9k reads",
-      "type": "Finished",
+      "type": "Read again",
       "category": "Trending blinks"
     }
   ]

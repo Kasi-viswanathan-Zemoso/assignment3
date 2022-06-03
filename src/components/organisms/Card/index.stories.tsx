@@ -4,7 +4,6 @@ import CardComponent from '.';
 
 import { ThemeProvider } from '@mui/material/styles'
 import CustomTheme from "../../../themes";
-import SearchIcon from '@mui/icons-material/Search';
 
 const meta: Meta = {
   title: 'Organisms/Card',
@@ -23,12 +22,12 @@ export const addToLibarry = () =>
       <CardComponent imgLocation={'static/images/1.png'} title={'Bring Your Human to Work'} author={'Erica Keswin'} readTime={13} readers={'1.9k'} type={'Add To Library'} onClick={() => {}} />
   </ThemeProvider>
 
-export const readAgain = () =>
-  <ThemeProvider theme={CustomTheme}>
-      <CardComponent imgLocation={'static/images/1.png'} title={'Bring Your Human to Work'} author={'Erica Keswin'} readTime={13} readers={'1.9k'} type={'Read again'} onClick={() => {}} />
-  </ThemeProvider>
-
 export const finished = () =>
   <ThemeProvider theme={CustomTheme}>
       <CardComponent imgLocation={'static/images/1.png'} title={'Bring Your Human to Work'} author={'Erica Keswin'} readTime={13} readers={'1.9k'} type={'Finished'} onClick={() => {}} />
   </ThemeProvider>
+
+export const readAgain = () =>
+<ThemeProvider theme={CustomTheme}>
+    <CardComponent imgLocation={'static/images/1.png'} title={'Bring Your Human to Work'} author={'Erica Keswin'} readTime={13} readers={'1.9k'} type={'Read again'} onClick={() => {}} />
+</ThemeProvider>

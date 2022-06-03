@@ -20,7 +20,6 @@ import AppBarComponent from './components/organisms/AppBar';
 import CardComponent from './components/organisms/Card';
 import MyLibraryPage from './pages/MyLibrary';
 import EntrepreneurshipPage from './pages/Entrepreneurship';
-import KeepMountedModal from './components/molecules/Modal';
 
 import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import BookDetailViewPage from './pages/BookDetailView';

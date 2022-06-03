@@ -15,10 +15,10 @@ export default meta;
 
 export const textField = () =>
   <ThemeProvider theme={CustomTheme}>
-      <TextFieldComponent id={'search'} placeholder={'Search'} icon={undefined} length={200} />
+      <TextFieldComponent id={'search'} placeholder={'Search'} icon={undefined} length={200} onChange={undefined} />
   </ThemeProvider>
 
 export const textFieldWithIcon = () =>
 <ThemeProvider theme={CustomTheme}>
-    <TextFieldComponent id={'search'} placeholder={'Search'} icon={<SearchIcon />} length={500} />
+    <TextFieldComponent id={'search'} placeholder={'Search'} icon={<SearchIcon />} length={500} onChange={undefined} />
 </ThemeProvider>

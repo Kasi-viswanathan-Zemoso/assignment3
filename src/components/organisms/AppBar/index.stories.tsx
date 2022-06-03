@@ -5,6 +5,7 @@ import AppBarComponent from '.';
 import { ThemeProvider } from '@mui/material/styles'
 import CustomTheme from "../../../themes";
 import SearchIcon from '@mui/icons-material/Search';
+import { BrowserRouter as Router} from 'react-router-dom';
 
 const meta: Meta = {
   title: 'Organisms/AppBar',
@@ -14,6 +15,8 @@ const meta: Meta = {
 export default meta;
 
 export const appBar = () =>
+  <Router> 
   <ThemeProvider theme={CustomTheme}>
-      <AppBarComponent />
+     <AppBarComponent />
   </ThemeProvider>
+  </Router>

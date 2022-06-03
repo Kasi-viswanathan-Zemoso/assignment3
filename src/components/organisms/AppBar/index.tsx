@@ -45,6 +45,7 @@ import SchoolOutlinedIcon from '@mui/icons-material/SchoolOutlined';
 
 import {useNavigate, useParams} from 'react-router-dom'
 
+
 const style = {
   position: 'absolute' as 'absolute',
   transform: 'translate(-50%, -50%)',
@@ -249,8 +250,8 @@ const AppBarComponent = () => {
             </Grid>
             
             <Grid item key='18' xs={2} sm={4} md={4}>
-              <IconButton  sx={{'&:hover':{background:'none'}}}><SchoolOutlinedIcon sx={{'&:hover': {color:'green'}}} onClick={() => {console.log('icon clicked')}}></SchoolOutlinedIcon><Typography sx={{'&:hover': {color:'green'}}} onClick={() => {console.log('icon clicked')}}>Education</Typography></IconButton>
-            {/* <IconComponent icon={<SchoolOutlinedIcon />} title={'Education'} titleColor={''} onClick={() => {}} /> */}
+              {/* <IconButton  sx={{'&:hover':{background:'none'}}}><SchoolOutlinedIcon sx={{'&:hover': {color:'green'}}} onClick={() => {console.log('icon clicked')}}></SchoolOutlinedIcon><Typography sx={{'&:hover': {color:'green'}}} onClick={() => {console.log('icon clicked')}}>Education</Typography></IconButton> */}
+            <IconComponent icon={<SchoolOutlinedIcon />} title={'Education'} titleColor={''} onClick={() => {}} />
             {/* <SchoolOutlinedIcon sx={{'&:hover': {color:'secondary'}}} onClick={() => {console.log('icon clicked')}}><Typography sx={{'&:hover': {color:'secondary'}}} onClick={() => {console.log('icon clicked')}}>Education</Typography></SchoolOutlinedIcon> */}
             </Grid>
         </Grid>
