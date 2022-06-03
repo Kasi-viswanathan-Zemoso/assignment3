@@ -1,3 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testExecutions version="1">
+  <file path="/home/viswak/Desktop/Projects/assignment3/src/components/molecules/TextField/index.test.tsx">
+    <testCase name="Testing the ImageComponent render TextFieldComponent" duration="122"/>
+    <testCase name="Testing the ImageComponent render TextFieldComponent with icon" duration="23"/>
+  </file>
+  <file path="/home/viswak/Desktop/Projects/assignment3/src/components/atoms/Icon/index.test.tsx">
+    <testCase name="Testing the IconComponent render default IconComponent" duration="35"/>
+    <testCase name="Testing the IconComponent render IconComponent" duration="11"/>
+    <testCase name="Testing the IconComponent render IconComponent with title" duration="3"/>
+  </file>
+  <file path="/home/viswak/Desktop/Projects/assignment3/src/components/molecules/Avatar/index.test.tsx">
+    <testCase name="Testing the AvatarComponent render single name AvatarComponent" duration="34"/>
+    <testCase name="Testing the AvatarComponent render double name AvatarComponent" duration="3"/>
+    <testCase name="Testing the AvatarComponent render double name AvatarComponent with color" duration="7"/>
+    <testCase name="Testing the AvatarComponent render double name AvatarComponent with color and icon" duration="19"/>
+  </file>
+  <file path="/home/viswak/Desktop/Projects/assignment3/src/components/organisms/Card/index.test.tsx">
+    <testCase name="Testing the ImageComponent render CardComponent dots" duration="75"/>
+    <testCase name="Testing the ImageComponent render CardComponent Add to Library" duration="60"/>
+    <testCase name="Testing the ImageComponent render CardComponent Finished" duration="61"/>
+    <testCase name="Testing the ImageComponent render CardComponent Read again" duration="10"/>
+  </file>
+  <file path="/home/viswak/Desktop/Projects/assignment3/src/components/atoms/Button/index.test.tsx">
+    <testCase name="Testing the Button render default button" duration="56"/>
+    <testCase name="Testing the Button render disabled button" duration="17"/>
+    <testCase name="Testing the Button render contained button" duration="25"/>
+    <testCase name="Testing the Button render contained button with icon" duration="12"/>
+    <testCase name="Testing the Button render outlined button" duration="24"/>
+    <testCase name="Testing the Button render outlined button with icon" duration="20"/>
+    <testCase name="Testing the Button render text button" duration="3"/>
+    <testCase name="Testing the Button render text button with icon" duration="9"/>
+    <testCase name="Testing the Button render secondary button" duration="32"/>
+    <testCase name="Testing the Button should call on click" duration="58"/>
+  </file>
+  <file path="/home/viswak/Desktop/Projects/assignment3/src/components/atoms/Image/index.test.tsx">
+    <testCase name="Testing the ImageComponent render ImageComponent" duration="25"/>
+  </file>
+  <file path="/home/viswak/Desktop/Projects/assignment3/src/App.test.tsx">
+    <testCase name="renders learn react link" duration="382"/>
+  </file>
+  <file path="/home/viswak/Desktop/Projects/assignment3/src/components/molecules/Footer/index.test.tsx">
+    <testCase name="Testing the FooterComponent render FooterComponent" duration="62"/>
+  </file>
 </testExecutions>
