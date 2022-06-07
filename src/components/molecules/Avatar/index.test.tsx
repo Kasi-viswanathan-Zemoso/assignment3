@@ -17,6 +17,11 @@ describe('Testing the AvatarComponent', () => {
       expect(avatar).toMatchSnapshot();
     });
 
+    it('render double name AvatarComponent with deafult color', () => {
+      const avatar = renderer.create(<AvatarComponent userName={'Kasi Viswanthan'} color={''} icon={undefined}/>).toJSON();
+      expect(avatar).toMatchSnapshot();
+    });
+
     it('render double name AvatarComponent with color', () => {
       const avatar = renderer.create(<AvatarComponent userName={'Kasi Viswanthan'} color={'purple'} icon={undefined}/>).toJSON();
       expect(avatar).toMatchSnapshot();

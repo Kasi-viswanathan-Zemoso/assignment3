@@ -46,6 +46,9 @@ interface TabPanelProps {
     let { val } = useParams();
 
     let tabVal = parseInt(val!)
+    if (isNaN(tabVal)){
+      tabVal = 0
+    }
     const [value, setValue] = React.useState(tabVal);
   
     const handleChange = (event: React.SyntheticEvent, newValue: number) => {

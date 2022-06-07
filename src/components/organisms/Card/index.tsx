@@ -79,7 +79,7 @@ const CardComponent = ({imgLocation, title, author, readTime, readers, type, onC
             color='secondary'
             onClick={onClick}
             startIcon={<AddIcon />}>
-            <Typography color='inherit'>Finished</Typography>
+            <Typography color='inherit'>Add To Library</Typography>
         </Button>
     </div>
     )

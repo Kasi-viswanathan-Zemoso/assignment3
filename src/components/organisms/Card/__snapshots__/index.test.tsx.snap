@@ -124,7 +124,7 @@ exports[`Testing the ImageComponent render CardComponent Add to Library 1`] = `
         <ForwardRef(Typography)
           color="inherit"
         >
-          Finished
+          Add To Library
         </ForwardRef(Typography)>
       }
       disabled={false}
@@ -162,7 +162,7 @@ exports[`Testing the ImageComponent render CardComponent Add to Library 1`] = `
       <p
         className="MuiTypography-root MuiTypography-body1 css-1mdftu-MuiTypography-root"
       >
-        Finished
+        Add To Library
       </p>
     </button>
   </div>

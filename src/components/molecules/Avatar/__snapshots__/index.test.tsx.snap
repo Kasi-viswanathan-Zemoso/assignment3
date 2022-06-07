@@ -81,6 +81,29 @@ exports[`Testing the AvatarComponent render double name AvatarComponent with col
 </div>
 `;
 
+exports[`Testing the AvatarComponent render double name AvatarComponent with deafult color 1`] = `
+<div
+  style={
+    Object {
+      "display": "inline-flex",
+    }
+  }
+>
+  <div
+    className="MuiAvatar-root MuiAvatar-circular MuiAvatar-colorDefault css-cieima-MuiAvatar-root"
+  >
+    KV
+  </div>
+  <span
+    style={
+      Object {
+        "marginTop": "9px",
+      }
+    }
+  />
+</div>
+`;
+
 exports[`Testing the AvatarComponent render single name AvatarComponent 1`] = `
 <div
   style={
